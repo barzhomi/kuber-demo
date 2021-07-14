@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-replicaset
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: vue-demo
+        image: barzhomi/vue-demo
+        ports:
+        - containerPort: 80
+        env:
+        - name: API_BASE_URL
+          value: "http://37.18.100.63:8080"

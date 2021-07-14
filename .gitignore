@@ -2,6 +2,8 @@
 */*.tfstate*
 */id_rsa
 */id_rsa.pub
+*/token.txt
+*/*config.yaml
 
 .idea
 .DS_STORE
