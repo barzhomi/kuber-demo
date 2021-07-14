@@ -1,0 +1,7 @@
+*/.terraform
+*/*.tfstate*
+*/id_rsa
+*/id_rsa.pub
+
+.idea
+.DS_STORE
